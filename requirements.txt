@@ -1,0 +1,6 @@
+lightweight_mmm==0.1.3
+jax[cpu]==0.4.25
+numpyro==0.15.2
+pandas==2.2.2
+scikit-learn==1.5.1
+matplotlib==3.9.0

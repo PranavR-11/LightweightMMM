@@ -1,3 +1,14 @@
-# LightweightMMM
+# Analyst MMM Pipeline → Tableau Public
 
-This is a production-ready LightweightMMM implementation that leverages Meta’s Robyn dataset alongside Google Ads and Analytics exports to measure channel elasticities, adstock lags, and seasonality. The pipeline fits a Bayesian hill adstock model, validates results with rolling origin backtests and posterior predictive checks, and exports baseline forecasts, marginal ROI curves, and scenario grids for decision-making. Example outputs and a one-page business memo are included in docs/ and exports/ so non-technical reviewers can quickly see model impact. See docs/memo.pdf for a concise business summary and the recommended allocation scenario.
+This script:
+1. Trains a Bayesian MMM (LightweightMMM) with Strong-style Fourier seasonality (annual + monthly).
+2. Exports:
+   - `predictions.csv` → actual vs predicted weekly sales
+   - `scenarios.csv` → grid of allocation scenarios with predicted totals
+
+## Run
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python run_pipeline.py
