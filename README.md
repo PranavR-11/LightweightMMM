@@ -1,1 +1,3 @@
 # LightweightMMM
+
+This is a production-ready LightweightMMM implementation that leverages Meta’s Robyn dataset alongside Google Ads and Analytics exports to measure channel elasticities, adstock lags, and seasonality. The pipeline fits a Bayesian hill adstock model, validates results with rolling origin backtests and posterior predictive checks, and exports baseline forecasts, marginal ROI curves, and scenario grids for decision-making. Example outputs and a one-page business memo are included in docs/ and exports/ so non-technical reviewers can quickly see model impact. See docs/memo.pdf for a concise business summary and the recommended allocation scenario.
